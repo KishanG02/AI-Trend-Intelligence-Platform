@@ -1,0 +1,14 @@
+venv/
+.env
+
+__pycache__/
+
+*.pyc
+
+.airflow/
+
+.DS_Store
+
+.idea/
+
+.vscode/
