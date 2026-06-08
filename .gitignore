@@ -1,14 +1,27 @@
+# Virtual Environment
 venv/
+
+# Secrets
 .env
 
+# Python
 __pycache__/
-
 *.pyc
 
-.airflow/
+# Airflow
+airflow/logs/
+airflow/plugins/
 
+# macOS
 .DS_Store
 
+# IDE
 .idea/
-
 .vscode/
+
+# Data
+data/raw/
+data/processed/
+
+# Jupyter
+.ipynb_checkpoints/
