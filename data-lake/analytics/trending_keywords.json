@@ -1,0 +1,32 @@
+[
+    {
+        "rank": 1,
+        "keyword": "Azure",
+        "trend_score": 122.61
+    },
+    {
+        "rank": 2,
+        "keyword": "Cloud Computing",
+        "trend_score": 120.41
+    },
+    {
+        "rank": 3,
+        "keyword": "AWS",
+        "trend_score": 114.94
+    },
+    {
+        "rank": 4,
+        "keyword": "Kafka",
+        "trend_score": 114.0
+    },
+    {
+        "rank": 5,
+        "keyword": "Databricks",
+        "trend_score": 104.33
+    },
+    {
+        "rank": 6,
+        "keyword": "Artificial Intelligence",
+        "trend_score": 94.55
+    }
+]

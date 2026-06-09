@@ -1,0 +1,38 @@
+[
+    {
+        "keyword": "Azure",
+        "news_score": 122.61,
+        "youtube_score": 25,
+        "final_score": 147.61
+    },
+    {
+        "keyword": "Kafka",
+        "news_score": 114.0,
+        "youtube_score": 25,
+        "final_score": 139.0
+    },
+    {
+        "keyword": "AWS",
+        "news_score": 114.94,
+        "youtube_score": 20,
+        "final_score": 134.94
+    },
+    {
+        "keyword": "Databricks",
+        "news_score": 104.33,
+        "youtube_score": 20,
+        "final_score": 124.33
+    },
+    {
+        "keyword": "Cloud Computing",
+        "news_score": 120.41,
+        "youtube_score": 0,
+        "final_score": 120.41
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "news_score": 94.55,
+        "youtube_score": 0,
+        "final_score": 94.55
+    }
+]

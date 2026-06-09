@@ -1,0 +1,37 @@
+[
+    {
+        "keyword": "Azure",
+        "video_count": 5,
+        "unique_channels": 5
+    },
+    {
+        "keyword": "Snowflake",
+        "video_count": 5,
+        "unique_channels": 4
+    },
+    {
+        "keyword": "ChatGPT",
+        "video_count": 5,
+        "unique_channels": 5
+    },
+    {
+        "keyword": "Kafka",
+        "video_count": 5,
+        "unique_channels": 5
+    },
+    {
+        "keyword": "LangChain",
+        "video_count": 4,
+        "unique_channels": 2
+    },
+    {
+        "keyword": "AWS",
+        "video_count": 4,
+        "unique_channels": 3
+    },
+    {
+        "keyword": "Databricks",
+        "video_count": 4,
+        "unique_channels": 4
+    }
+]

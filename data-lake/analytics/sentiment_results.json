@@ -1,0 +1,296 @@
+[
+    {
+        "keyword": "Artificial Intelligence",
+        "title": "Seahorses and shark fins are illegally trafficked. An AI tool could help stop this crime",
+        "sentiment": "negative",
+        "compound_score": -0.5574
+    },
+    {
+        "keyword": "Databricks",
+        "title": "Snowflake, Databricks and the model makers: The battle for the agentic client and AI back end",
+        "sentiment": "negative",
+        "compound_score": -0.7003
+    },
+    {
+        "keyword": "Kafka",
+        "title": "7 Most Underrated Spring 2026 Anime You Can Stream Now",
+        "sentiment": "positive",
+        "compound_score": 0.9201
+    },
+    {
+        "keyword": "Azure",
+        "title": "Happy Chillwave (2026)",
+        "sentiment": "positive",
+        "compound_score": 0.25
+    },
+    {
+        "keyword": "AWS",
+        "title": "sahara-memory added to PyPI",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "AWS",
+        "title": "'I wish I could kill 300,000,000 Americans': FBI arrests three men accused of funding ISIS weapons",
+        "sentiment": "negative",
+        "compound_score": -0.743
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "Our systems editor flew all the way to Taiwan and still couldn't get away from AI",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Azure",
+        "title": "mcp-devops-onpremise 0.3.0",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "SK Telecom and NVIDIA Build AI Infrastructure to Power Korea\u2019s AI Innovation",
+        "sentiment": "positive",
+        "compound_score": 0.3818
+    },
+    {
+        "keyword": "Azure",
+        "title": "Show HN: Nightwatch, The open-source, read-only AI SRE",
+        "sentiment": "positive",
+        "compound_score": 0.3182
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "What Is Mistral AI? The Open-Source Alternative to ChatGPT Explained",
+        "sentiment": "positive",
+        "compound_score": 0.644
+    },
+    {
+        "keyword": "Kafka",
+        "title": "datris-mcp-server 1.8.4",
+        "sentiment": "positive",
+        "compound_score": 0.3612
+    },
+    {
+        "keyword": "AWS",
+        "title": "\u3010\u30a4\u30d9\u30f3\u30c8\u51fa\u5c55\u30fb\u65b0\u30ad\u30e3\u30e9\u30af\u30bf\u30fc\u767a\u8868\u3011Boomi\u3001AWS Summit Japan 2026\u306b\u30b4\u30fc\u30eb\u30c9\u30b9\u30dd\u30f3\u30b5\u30fc\u3068\u3057\u3066\u51fa\u5c55",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Azure",
+        "title": "Show HN: Nightwatch, The open-source, read-only AI SRE",
+        "sentiment": "positive",
+        "compound_score": 0.3182
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
+        "sentiment": "neutral",
+        "compound_score": -0.0258
+    },
+    {
+        "keyword": "Databricks",
+        "title": "Is managing a data BI project complicated? Challenges, big mistakes, frameworks and real lessons from big companies",
+        "sentiment": "neutral",
+        "compound_score": -0.0258
+    },
+    {
+        "keyword": "Databricks",
+        "title": "Show HN: Free job postings API with 1.8M+ US jobs, 60k companies",
+        "sentiment": "positive",
+        "compound_score": 0.5106
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "title": "OpenAI\u2019s planned \u2018superapp\u2019 gets closer as one employee says \u2018chat is dead\u2019",
+        "sentiment": "positive",
+        "compound_score": 0.6908
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
+        "sentiment": "neutral",
+        "compound_score": -0.0258
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "Our systems editor flew all the way to Taiwan and still couldn't get away from AI",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Kafka",
+        "title": "amgi-kafka-event-source-mapping 0.40.0",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
+        "sentiment": "positive",
+        "compound_score": 0.296
+    },
+    {
+        "keyword": "Databricks",
+        "title": "Coatue Management\u2019s Thomas Laffont outlines AI IPO wave, predicts trillion-dollar valuations for OpenAI, Anthropic, and SpaceX",
+        "sentiment": "positive",
+        "compound_score": 0.2732
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "SK Telecom and NVIDIA Build AI Infrastructure to Power Korea\u2019s AI Innovation",
+        "sentiment": "positive",
+        "compound_score": 0.3818
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "title": "Onsemi promotes 800 VDC power architecture for future AI infrastructure",
+        "sentiment": "positive",
+        "compound_score": 0.8625
+    },
+    {
+        "keyword": "Databricks",
+        "title": "Snowflake, Databricks and the model makers: The battle for the agentic client and AI back end",
+        "sentiment": "negative",
+        "compound_score": -0.7003
+    },
+    {
+        "keyword": "Azure",
+        "title": "mcp-devops-onpremise 0.3.0",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "AWS",
+        "title": "'I wish I could kill 300,000,000 Americans': FBI arrests three men accused of funding ISIS weapons",
+        "sentiment": "negative",
+        "compound_score": -0.743
+    },
+    {
+        "keyword": "Azure",
+        "title": "Log File Analysis: Track AI Bots & Fix Crawl Gaps | Similarweb",
+        "sentiment": "positive",
+        "compound_score": 0.3691
+    },
+    {
+        "keyword": "Cloud Computing",
+        "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
+        "sentiment": "positive",
+        "compound_score": 0.296
+    },
+    {
+        "keyword": "Azure",
+        "title": "Space Zen Zone (2026)",
+        "sentiment": "positive",
+        "compound_score": 0.5574
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "title": "Breaking: Florentino confirms Mourinho's return to Real Madrid",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Azure",
+        "title": "Space Zen Zone (2026)",
+        "sentiment": "positive",
+        "compound_score": 0.5574
+    },
+    {
+        "keyword": "Databricks",
+        "title": "ygg 0.8.59",
+        "sentiment": "positive",
+        "compound_score": 0.2263
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "title": " Worth R$9bn, France are the most valuable team at World Cup 2026",
+        "sentiment": "positive",
+        "compound_score": 0.6478
+    },
+    {
+        "keyword": "AWS",
+        "title": "Is CoreWeave, Inc. (CRWV) A Good Stock To Buy Now?",
+        "sentiment": "positive",
+        "compound_score": 0.7319
+    },
+    {
+        "keyword": "AWS",
+        "title": "\u3010\u30a4\u30d9\u30f3\u30c8\u51fa\u5c55\u30fb\u65b0\u30ad\u30e3\u30e9\u30af\u30bf\u30fc\u767a\u8868\u3011Boomi\u3001AWS Summit Japan 2026\u306b\u30b4\u30fc\u30eb\u30c9\u30b9\u30dd\u30f3\u30b5\u30fc\u3068\u3057\u3066\u51fa\u5c55",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Kafka",
+        "title": "system-design added to PyPI",
+        "sentiment": "positive",
+        "compound_score": 0.4767
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "title": " Worth R$9bn, France are the most valuable team at World Cup 2026",
+        "sentiment": "positive",
+        "compound_score": 0.6478
+    },
+    {
+        "keyword": "Azure",
+        "title": "Log File Analysis: Track AI Bots & Fix Crawl Gaps | Similarweb",
+        "sentiment": "positive",
+        "compound_score": 0.3691
+    },
+    {
+        "keyword": "Kafka",
+        "title": "Show HN: About Lightweight, S3-compatible object storage",
+        "sentiment": "negative",
+        "compound_score": -0.2732
+    },
+    {
+        "keyword": "Kafka",
+        "title": "system-design added to PyPI",
+        "sentiment": "positive",
+        "compound_score": 0.4767
+    },
+    {
+        "keyword": "AWS",
+        "title": "recon-gen 13.4.0",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Databricks",
+        "title": "Is managing a data BI project complicated? Challenges, big mistakes, frameworks and real lessons from big companies",
+        "sentiment": "neutral",
+        "compound_score": -0.0258
+    },
+    {
+        "keyword": "Kafka",
+        "title": "7 Most Underrated Spring 2026 Anime You Can Stream Now",
+        "sentiment": "positive",
+        "compound_score": 0.9201
+    },
+    {
+        "keyword": "AWS",
+        "title": "recon-gen 13.4.0",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "AWS",
+        "title": "Is CoreWeave, Inc. (CRWV) A Good Stock To Buy Now?",
+        "sentiment": "positive",
+        "compound_score": 0.7319
+    },
+    {
+        "keyword": "Kafka",
+        "title": "amgi-kafka-event-source-mapping 0.40.0",
+        "sentiment": "neutral",
+        "compound_score": 0.0
+    },
+    {
+        "keyword": "Databricks",
+        "title": "ygg 0.8.59",
+        "sentiment": "positive",
+        "compound_score": 0.2263
+    }
+]

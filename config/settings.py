@@ -5,7 +5,7 @@ KAFKA_BROKER = "localhost:9092"
 # Kafka Topics
 
 NEWS_TOPIC = "news_data"
-YOUTUBE_TOPIC = "youtube_data"
+YOUTUBE_TOPIC = "youtube_stream"
 TREND_TOPIC = "trend_data"
 
 # Legacy topic (optional)

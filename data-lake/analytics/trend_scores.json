@@ -1,0 +1,38 @@
+[
+    {
+        "keyword": "Azure",
+        "article_count": 9,
+        "avg_sentiment": 0.304,
+        "trend_score": 122.61
+    },
+    {
+        "keyword": "Cloud Computing",
+        "article_count": 9,
+        "avg_sentiment": 0.216,
+        "trend_score": 120.41
+    },
+    {
+        "keyword": "AWS",
+        "article_count": 9,
+        "avg_sentiment": -0.002,
+        "trend_score": 114.94
+    },
+    {
+        "keyword": "Kafka",
+        "article_count": 8,
+        "avg_sentiment": 0.36,
+        "trend_score": 114.0
+    },
+    {
+        "keyword": "Databricks",
+        "article_count": 8,
+        "avg_sentiment": -0.027,
+        "trend_score": 104.33
+    },
+    {
+        "keyword": "Artificial Intelligence",
+        "article_count": 6,
+        "avg_sentiment": 0.382,
+        "trend_score": 94.55
+    }
+]
