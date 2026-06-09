@@ -4,11 +4,11 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 
 with DAG(
-    dag_id="news_pipeline",
+    dag_id="ai_trend_pipeline",
     start_date=datetime(2026, 1, 1),
-    schedule=None,
+    schedule="*/30 * * * *",
     catchup=False,
-    tags=["news", "etl"],
+    tags=["ai", "trends", "youtube", "news"],
 ) as dag:
 
     fetch_news = BashOperator(
@@ -27,19 +27,19 @@ with DAG(
         """
     )
 
-    generate_metrics = BashOperator(
-        task_id="generate_metrics",
+    sentiment_analysis = BashOperator(
+        task_id="sentiment_analysis",
         bash_command="""
         cd /opt/airflow/project &&
-        python -m analytics.news_metrics
+        python -m ai.sentiment_analyzer
         """
     )
 
-    sentiment_analysis = BashOperator(
-        task_id = "sentiment_analysis",
+    sentiment_summary = BashOperator(
+        task_id="sentiment_summary",
         bash_command="""
         cd /opt/airflow/project &&
-        pyhton -m ai.sentiment_analyzer
+        python -m analytics.sentiment_summary
         """
     )
 
@@ -52,11 +52,27 @@ with DAG(
     )
 
     leaderboard = BashOperator(
-        task_id = "leaderboard",
+        task_id="leaderboard",
         bash_command="""
         cd /opt/airflow/project &&
         python -m analytics.leaderboard
         """
     )
 
-    fetch_news >> validate_news >> generate_metrics >> sentiment_analysis >> trend_scoring >> leaderboard
+    unified_trends = BashOperator(
+        task_id="unified_trends",
+        bash_command="""
+        cd /opt/airflow/project &&
+        python -m analytics.unified_trend_engine
+        """
+    )
+
+    (
+        fetch_news
+        >> validate_news
+        >> sentiment_analysis
+        >> sentiment_summary
+        >> trend_scoring
+        >> leaderboard
+        >> unified_trends
+    )

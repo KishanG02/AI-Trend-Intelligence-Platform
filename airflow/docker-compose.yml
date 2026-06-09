@@ -10,6 +10,7 @@ services:
 
     environment:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      KAFKA_BROKER: kafka:9092
 
     volumes:
       - ./dags:/opt/airflow/dags
