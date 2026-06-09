@@ -84,7 +84,7 @@ page = st.sidebar.radio(
         "Leaderboard",
         "Sentiment Analytics",
         "Top Channels",
-        "Pipeline Health"
+        "Pipeline Health",
         "AI Insights"
     ]
 )
@@ -441,18 +441,25 @@ elif page == "AI Insights":
 
     st.subheader("🤖 AI Trend Intelligence")
 
-    with open(
-        ANALYTICS_PATH / "ai_summary.json"
-    ) as f:
-        ai_summary = json.load(f)
+    try:
+        with open(
+            ANALYTICS_PATH / "ai_summary.json"
+        ) as f:
+            ai_summary = json.load(f)
 
-    st.info(
-        f"Generated: {ai_summary['generated_at']}"
-    )
+        st.success(
+            f"Generated: {ai_summary['generated_at']}"
+        )
 
-    st.markdown(
-        ai_summary["summary"]
-    )
+        st.markdown(
+            ai_summary["summary"]
+        )
+
+    except Exception as e:
+
+        st.error(
+            f"Unable to load AI summary: {e}"
+        )
 
 # =====================================================
 
