@@ -15,13 +15,6 @@
 
 <br/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/KrishanG02/ai-trend-intelligence-platform?style=flat-square&color=yellow)](https://github.com/KrishanG02/ai-trend-intelligence-platform/stargazers)
-[![Forks](https://img.shields.io/github/forks/KrishanG02/ai-trend-intelligence-platform?style=flat-square&color=blue)](https://github.com/KrishanG02/ai-trend-intelligence-platform/network)
-[![Issues](https://img.shields.io/github/issues/KrishanG02/ai-trend-intelligence-platform?style=flat-square&color=red)](https://github.com/KrishanG02/ai-trend-intelligence-platform/issues)
-
-<br/>
-
 > **An end-to-end Real-Time AI Trend Intelligence Platform** that continuously monitors emerging technology trends from News APIs and YouTube, processes streams through Kafka and Airflow, performs sentiment analysis, forecasts future trends, and surfaces AI-powered executive summaries — all through a single interactive Streamlit dashboard.
 
 <br/>
