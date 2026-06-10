@@ -91,6 +91,14 @@ with DAG(
         """
     )
 
+    discover_trends = BashOperator(
+        task_id="discover_trends",
+        bash_command="""
+        cd /opt/airflow/project &&
+        python -m analytics.trend_discovery
+        """
+    )
+
     (
         fetch_news
         >> validate_news
@@ -99,7 +107,8 @@ with DAG(
         >> trend_scoring
         >> leaderboard
         >> unified_trends
-        >> trend_forecast 
+        >> trend_forecast
+        >> discover_trends
         >> ai_summary
         >> upload_to_minio
     )

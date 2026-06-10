@@ -31,7 +31,7 @@ with open(TREND_FILE) as f:
 # Create records
 # ====================================
 
-today = datetime.now().strftime(
+date = datetime.now().strftime(
     "%Y-%m-%d %H:%M:%S"
 )
 

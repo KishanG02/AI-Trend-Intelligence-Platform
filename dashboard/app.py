@@ -74,6 +74,26 @@ top_channels_df = pd.DataFrame(top_channels)
 
 unified_df = pd.DataFrame(unified_scores)
 
+selected_category = st.sidebar.selectbox(
+    "Technology Category",
+    [
+        "All"
+    ] + sorted(
+        unified_df["category"]
+        .unique()
+        .tolist()
+    )
+)
+
+filtered_unified_df = unified_df.copy()
+
+if selected_category != "All":
+
+    filtered_unified_df = unified_df[
+        unified_df["category"]
+        == selected_category
+    ]
+
 try:
     with open(
         ANALYTICS_PATH / "ai_summary.json"
@@ -98,6 +118,7 @@ page = st.sidebar.radio(
     "Choose a Section",
     [
         "Overview",
+        "Emerging Trends",
         "Unified Trends",
         "Leaderboard",
         "Trend History",
@@ -216,7 +237,7 @@ if page == "Overview":
         st.subheader("📈 Technology Trend Scores")
 
         fig = px.bar(
-            unified_df,
+            filtered_unified_df,
             x="keyword",
             y="final_score",
             color="final_score",
@@ -286,6 +307,30 @@ if page == "Overview":
 
 # =====================================================
 
+# Emerging Trends
+
+# =====================================================
+
+elif page == "Emerging Trends":
+
+    st.title("📈 Emerging Technology Relationships")
+
+    st.dataframe(discovered_df)
+
+    fig = px.bar(
+        discovered_df.head(20),
+        x="keyword",
+        y="count",
+        title="Top Emerging Technology Relationships"
+    )
+
+    st.plotly_chart(
+        fig,
+        use_container_width=True
+    )
+
+# =====================================================
+
 # Trend History
 
 # =====================================================
@@ -339,16 +384,16 @@ elif page == "Unified Trends":
 
     st.metric(
         "Tracked Technologies",
-        len(unified_df)
+        len(filtered_unified_df)
     )
 
     st.dataframe(
-        unified_df,
+        filtered_unified_df,
         use_container_width=True
     )
 
     fig = px.bar(
-        unified_df,
+        filtered_unified_df,
         x="keyword",
         y="final_score",
         color="final_score",
@@ -421,7 +466,27 @@ elif page == "Leaderboard":
 
     medals = ["🥇", "🥈", "🥉"]
 
-    for idx, item in enumerate(leaderboard):
+    leaderboard_df = pd.DataFrame(
+        leaderboard
+    )
+
+    if selected_category != "All":
+
+        leaderboard_df = leaderboard_df.merge(
+            unified_df[
+                ["keyword", "category"]
+            ],
+            on="keyword"
+        )
+
+        leaderboard_df = leaderboard_df[
+            leaderboard_df["category"]
+            == selected_category
+        ]
+
+    for idx, item in enumerate(
+        leaderboard_df.to_dict("records")
+    ):
 
         medal = medals[idx] if idx < 3 else "🏅"
 

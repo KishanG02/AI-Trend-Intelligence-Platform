@@ -1,0 +1,46 @@
+[
+    {
+        "keyword": "ChatGPT + OpenAI",
+        "count": 5
+    },
+    {
+        "keyword": "ChatGPT + Mistral",
+        "count": 3
+    },
+    {
+        "keyword": "Mistral + OpenAI",
+        "count": 3
+    },
+    {
+        "keyword": "Artificial Intelligence + Databricks",
+        "count": 2
+    },
+    {
+        "keyword": "Artificial Intelligence + Snowflake",
+        "count": 2
+    },
+    {
+        "keyword": "Databricks + Snowflake",
+        "count": 2
+    },
+    {
+        "keyword": "Artificial Intelligence + ChatGPT",
+        "count": 2
+    },
+    {
+        "keyword": "Artificial Intelligence + OpenAI",
+        "count": 2
+    },
+    {
+        "keyword": "Databricks + Python",
+        "count": 2
+    },
+    {
+        "keyword": "Databricks + Spark",
+        "count": 2
+    },
+    {
+        "keyword": "Python + Spark",
+        "count": 2
+    }
+]

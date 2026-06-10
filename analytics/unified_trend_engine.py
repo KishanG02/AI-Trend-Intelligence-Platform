@@ -1,9 +1,19 @@
 import json
 from pathlib import Path
+from config.settings import TREND_CATEGORIES
 
 ANALYTICS_PATH = Path(
 "data-lake/analytics"
 )
+
+def get_category(keyword):
+
+    for category, keywords in TREND_CATEGORIES.items():
+
+        if keyword in keywords:
+            return category
+
+    return "Other"
 
 # -----------------------------
 
@@ -66,12 +76,10 @@ for item in news_trends:
 
     results.append({
         "keyword": keyword,
-        "news_score":
-            news_score,
-        "youtube_score":
-            youtube_score,
-        "final_score":
-            final_score
+        "category": get_category(keyword),
+        "news_score": news_score,
+        "youtube_score": youtube_score,
+        "final_score": final_score
     })
 
 
