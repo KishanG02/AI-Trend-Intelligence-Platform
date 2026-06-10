@@ -60,6 +60,19 @@ with open(ANALYTICS_PATH / "youtube" / "youtube_summary.json") as f:
 with open(ANALYTICS_PATH / "youtube" / "top_channels.json") as f:
     top_channels = json.load(f)
 
+trend_history_path = (
+    ANALYTICS_PATH /
+    "trend_history.csv"
+)
+
+trend_history_df = pd.read_csv(
+    trend_history_path
+)
+
+trend_history_df["date"] = pd.to_datetime(
+    trend_history_df["date"]
+)
+
 top_channels_df = pd.DataFrame(
     top_channels
 )
@@ -82,6 +95,7 @@ page = st.sidebar.radio(
         "Overview",
         "Unified Trends",
         "Leaderboard",
+        "Trend History",
         "Sentiment Analytics",
         "Top Channels",
         "Pipeline Health",
@@ -263,6 +277,47 @@ if page == "Overview":
             pie,
             use_container_width=True
         )
+
+# =====================================================
+
+# Trend History
+
+# =====================================================
+
+elif page == "Trend History":
+
+    st.title("📈 Trend History")
+
+    keywords = sorted(
+        trend_history_df["keyword"].unique()
+    )
+
+    selected_keywords = st.multiselect(
+        "Select Technologies",
+        keywords,
+        default=keywords[:3]
+    )
+
+    filtered_df = trend_history_df[
+        trend_history_df["keyword"].isin(
+            selected_keywords
+        )
+    ]
+
+    fig = px.line(
+        filtered_df,
+        x="date",
+        y="final_score",
+        color="keyword",
+        markers=True,
+        template=plotly_template,
+        title="Technology Trend Scores Over Time"
+    )
+
+    st.plotly_chart(
+        fig,
+        use_container_width=True
+    )
 
 # =====================================================
 
