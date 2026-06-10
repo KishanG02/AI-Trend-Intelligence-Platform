@@ -75,6 +75,15 @@ with DAG(
         """
     )
 
+    upload_to_minio = BashOperator(
+        task_id="upload_to_minio",
+        bash_command="""
+        cd /opt/airflow/project &&
+        python -m storage.minio_uploader
+        """
+    )
+
+
     (
         fetch_news
         >> validate_news
@@ -84,4 +93,5 @@ with DAG(
         >> leaderboard
         >> unified_trends
         >> ai_summary
+        >> upload_to_minio
     )

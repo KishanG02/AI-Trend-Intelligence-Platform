@@ -1,7 +1,7 @@
 import boto3
 from pathlib import Path
 
-MINIO_ENDPOINT = "http://localhost:9000"
+MINIO_ENDPOINT = "http://minio:9000"
 ACCESS_KEY = "admin"
 SECRET_KEY = "password123"
 BUCKET_NAME = "ai-trend-lake"

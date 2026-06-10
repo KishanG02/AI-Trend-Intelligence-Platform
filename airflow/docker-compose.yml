@@ -19,3 +19,10 @@ services:
       - ../:/opt/airflow/project
 
     command: standalone
+
+    networks:
+      - ai-trend-engine_default
+
+networks:
+  ai-trend-engine_default:
+    external: true
