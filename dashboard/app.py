@@ -60,26 +60,19 @@ with open(ANALYTICS_PATH / "youtube" / "youtube_summary.json") as f:
 with open(ANALYTICS_PATH / "youtube" / "top_channels.json") as f:
     top_channels = json.load(f)
 
-trend_history_path = (
-    ANALYTICS_PATH /
-    "trend_history.csv"
-)
+trend_history_path = (ANALYTICS_PATH / "trend_history.csv")
 
-trend_history_df = pd.read_csv(
-    trend_history_path
-)
+trend_history_df = pd.read_csv(trend_history_path)
 
-trend_history_df["date"] = pd.to_datetime(
-    trend_history_df["date"]
-)
+trend_history_df["date"] = pd.to_datetime(trend_history_df["date"])
 
-top_channels_df = pd.DataFrame(
-    top_channels
-)
+forecast_df = pd.read_csv(ANALYTICS_PATH / "trend_forecast.csv")
 
-unified_df = pd.DataFrame(
-    unified_scores
-)
+forecast_df["date"] = pd.to_datetime(forecast_df["date"])
+
+top_channels_df = pd.DataFrame(top_channels)
+
+unified_df = pd.DataFrame(unified_scores)
 
 # =====================================================
 
@@ -98,8 +91,9 @@ page = st.sidebar.radio(
         "Trend History",
         "Sentiment Analytics",
         "Top Channels",
-        "Pipeline Health",
-        "AI Insights"
+        "Forecast Analytics",
+        "AI Insights",
+        "Pipeline Health"
     ]
 )
 
@@ -466,25 +460,51 @@ elif page == "Sentiment Analytics":
         use_container_width=True
     )
 
+# =====================================================
+
+# Forecast Analysis
 
 # =====================================================
 
-# TREND DETAILS
+elif page == "Forecast Analytics":
 
-# =====================================================
+    st.title("📈 Forecast Analytics")
 
-elif page == "Pipeline Health":
-
-    st.subheader(
-        "🟢 Pipeline Health"
+    selected_keyword = st.selectbox(
+        "Technology",
+        sorted(
+            forecast_df["keyword"].unique()
+        )
     )
 
-    st.success("Kafka Running")
-    st.success("Airflow Running")
-    st.success("News Pipeline Running")
-    st.success("YouTube Pipeline Running")
-    st.success("Sentiment Engine Running")
-    st.success("Unified Trend Engine Running")
+    history = trend_history_df[
+        trend_history_df["keyword"]
+        == selected_keyword
+    ]
+
+    forecast = forecast_df[
+        forecast_df["keyword"]
+        == selected_keyword
+    ]
+
+    fig = px.line(
+        history,
+        x="date",
+        y="final_score",
+        title=f"{selected_keyword} Trend Forecast"
+    )
+
+    fig.add_scatter(
+        x=forecast["date"],
+        y=forecast["predicted_score"],
+        mode="lines+markers",
+        name="Forecast"
+    )
+
+    st.plotly_chart(
+        fig,
+        use_container_width=True
+    )
 
 # =====================================================
 
@@ -515,6 +535,25 @@ elif page == "AI Insights":
         st.error(
             f"Unable to load AI summary: {e}"
         )
+
+# =====================================================
+
+# TREND DETAILS
+
+# =====================================================
+
+elif page == "Pipeline Health":
+
+    st.subheader(
+        "🟢 Pipeline Health"
+    )
+
+    st.success("Kafka Running")
+    st.success("Airflow Running")
+    st.success("News Pipeline Running")
+    st.success("YouTube Pipeline Running")
+    st.success("Sentiment Engine Running")
+    st.success("Unified Trend Engine Running")
 
 # =====================================================
 
