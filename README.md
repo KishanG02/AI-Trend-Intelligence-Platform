@@ -1,9 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,100:00D4FF&height=200&section=header&text=AI%20Trend%20Intelligence%20Platform&fontSize=36&fontColor=ffffff&fontAlignY=38&desc=Real-Time%20Technology%20Trend%20Monitoring%20%7C%20Kafka%20%7C%20Airflow%20%7C%20Groq%20LLM%20%7C%20Streamlit&descAlignY=58&descSize=14" alt="Header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,100:00D4FF&height=200&section=header&text=Tech%20Trend%20Intelligence%20Platform&fontSize=34&fontColor=ffffff&fontAlignY=38&desc=Real-Time%20Trend%20Monitoring%20%7C%20Sentiment%20Analytics%20%7C%20Forecasting%20%7C%20Emerging%20Tech%20Discovery&descAlignY=58&descSize=13" alt="Header"/>
 
 <br/>
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://ai-trend-intelligence-platform.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
 [![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)](https://airflow.apache.org/)
@@ -15,21 +16,23 @@
 
 <br/>
 
-> **An end-to-end Real-Time AI Trend Intelligence Platform** that continuously monitors emerging technology trends from News APIs and YouTube, processes streams through Kafka and Airflow, performs sentiment analysis, forecasts future trends, and surfaces AI-powered executive summaries — all through a single interactive Streamlit dashboard.
+> **A Real-Time Tech Trend Intelligence Platform** that continuously collects technology content from News APIs and YouTube, streams through Kafka, orchestrates via Airflow, performs sentiment analysis, discovers emerging technology relationships, forecasts trend growth, and surfaces AI-powered insights — all through a single interactive Streamlit dashboard.
 
 <br/>
+
+[🚀 Live Demo](#-live-demo) · [🚀 Quick Start](#-quick-start) · [🏗️ Architecture](#️-architecture) · [✨ Features](#-features) · [📊 Dashboard](#-dashboard-modules) · [🛠️ Tech Stack](#️-tech-stack) · [🤝 Contributing](#-contributing)
+
+</div>
 
 ---
 
 ## 🚀 Live Demo
 
-> 🔗 **[https://ai-trend-intelligence-platform-84tdyz8glqspqdrsnhj27q.streamlit.app/](https://ai-trend-intelligence-platform-84tdyz8glqspqdrsnhj27q.streamlit.app/)**
+<div align="center">
 
----
+**[🖥️ View Live Dashboard →](https://ai-trend-intelligence-platform.streamlit.app/)**
 
-<br/>
-
-[🚀 Quick Start](#-quick-start) · [🏗️ Architecture](#️-architecture) · [✨ Features](#-features) · [📊 Dashboard](#-dashboard-modules) · [🛠️ Tech Stack](#️-tech-stack) · [🤝 Contributing](#-contributing)
+> Deployed on Streamlit Cloud — no setup required, open instantly in your browser.
 
 </div>
 
@@ -44,9 +47,10 @@ Organizations today are overwhelmed with technology signals — news, YouTube, s
 | Technology trends move fast | Real-time ingestion via Kafka + News/YouTube APIs |
 | Raw data is unstructured | NLP sentiment analysis + unified trend scoring |
 | Hard to forecast what's next | ML-powered trend forecasting engine |
+| Unknown technology relationships | Emerging tech discovery & co-occurrence analysis |
 | Reports take too long to write | Groq LLM generates executive summaries automatically |
 | No single source of truth | MinIO data lake centralizes all analytics |
-| Complex to navigate | Interactive Streamlit dashboard with 7 modules |
+| Complex to navigate | Interactive Streamlit dashboard with 8 modules |
 
 ---
 
@@ -139,6 +143,18 @@ Organizations today are overwhelmed with technology signals — news, YouTube, s
 </details>
 
 <details>
+<summary><b>🔗 Emerging Technology Discovery</b></summary>
+
+<br/>
+
+- **Co-Occurrence Analysis** — Automatically discovers which technologies are trending together
+- **Relationship Mapping** — Surfaces pairs like `ChatGPT + OpenAI`, `Databricks + Snowflake`, `Python + Spark`
+- **Category Intelligence** — Tracks trends across AI, Cloud, Data Engineering, Cybersecurity, and Software Engineering
+- **Auto-Discovery Pipeline** — New technology relationships surface without manual configuration
+
+</details>
+
+<details>
 <summary><b>📈 Predictive Analytics</b></summary>
 
 <br/>
@@ -157,6 +173,7 @@ Organizations today are overwhelmed with technology signals — news, YouTube, s
 | Module | Description |
 |---|---|
 | 🏠 **Overview** | High-level trend intelligence snapshot with top movers |
+| 🌱 **Emerging Trends** | Technology relationship discovery and co-occurrence analysis |
 | 🔥 **Unified Trends** | Combined News + YouTube scores in one leaderboard |
 | 📅 **Trend History** | Time-series evolution of any tracked technology |
 | 🔮 **Forecast Analytics** | ML-powered future trend predictions with confidence ranges |
@@ -188,36 +205,35 @@ Organizations today are overwhelmed with technology signals — news, YouTube, s
 ## 📂 Project Structure
 
 ```
-ai-trend-engine/
+tech-trend-intelligence-platform/
 │
-├── 📁 airflow/
-│   ├── dags/                    # Airflow DAG definitions
-│   └── docker-compose.yml       # Airflow Docker setup
+├── 📁 airflow/                      # Airflow DAGs and Docker setup
 │
 ├── 📁 analytics/
-│   ├── trend_scoring.py         # Composite trend scoring logic
-│   ├── leaderboard.py           # Trend leaderboard generator
-│   ├── trend_history.py         # Historical time-series tracker
-│   └── trend_forecast.py        # ML forecasting engine
-│
-├── 📁 ai/
-│   ├── sentiment_analyzer.py    # VADER sentiment pipeline
-│   └── trend_report_generator.py # Groq LLM summary generator
+│   ├── trend_scoring.py             # Composite trend scoring logic
+│   ├── leaderboard.py               # Trend leaderboard generator
+│   ├── trend_history.py             # Historical time-series tracker
+│   └── trend_forecast.py            # ML forecasting engine
 │
 ├── 📁 dashboard/
-│   └── app.py                   # Streamlit dashboard (7 modules)
+│   └── app.py                       # Streamlit dashboard (8 modules)
+│
+├── 📁 ingestion/                    # News & YouTube ingestion logic
 │
 ├── 📁 storage/
-│   └── minio_uploader.py        # MinIO data lake uploader
+│   └── minio_uploader.py            # MinIO data lake uploader
 │
-├── 📁 streaming/
-│   ├── news_producer.py         # Kafka news producer
-│   └── youtube_producer.py      # Kafka YouTube producer
+├── 📁 streaming/                    # Kafka producers
 │
-├── 📁 config/                   # Configuration files
-├── 📁 data-lake/                # Local data lake artifacts
+├── 📁 config/                       # Configuration files
+│
+├── 📁 data-lake/
+│   ├── raw/                         # Raw ingested payloads
+│   ├── processed/                   # Cleaned & validated data
+│   └── analytics/                   # Scored, forecast & summary outputs
+│
 ├── 📄 requirements.txt
-└── 📄 .env.example
+└── 📄 README.md
 ```
 
 ---
@@ -298,26 +314,38 @@ streamlit run dashboard/app.py
 ## 📈 Analytics Pipeline Flow
 
 ```
-① Fetch News & YouTube Data
+① fetch_news
          ↓
-② Validate & Clean Payloads
+② youtube_trends
          ↓
-③ VADER Sentiment Analysis
+③ sentiment_analysis
          ↓
-④ Unified Trend Scoring
+④ unified_trends
          ↓
-⑤ Leaderboard Generation
+⑤ trend_history
          ↓
-⑥ Trend History Logging
+⑥ trend_forecast
          ↓
-⑦ ML Trend Forecasting
+⑦ discover_trends
          ↓
-⑧ Groq AI Summary Generation
+⑧ ai_summary
          ↓
 ⑨ Upload to MinIO Data Lake
          ↓
 ⑩ Render in Streamlit Dashboard
 ```
+
+---
+
+## 🔭 Tracked Technology Categories
+
+| Category | Example Technologies |
+|---|---|
+| 🤖 **Artificial Intelligence** | ChatGPT, GPT-4, Mistral, LangChain, OpenAI |
+| ☁️ **Cloud Computing** | AWS, GCP, Azure, Kubernetes, Terraform |
+| 🏗️ **Data Engineering** | Spark, Databricks, Snowflake, Airflow, Kafka |
+| 🔐 **Cybersecurity** | Zero Trust, SIEM, Threat Detection, SOC |
+| 💻 **Software Engineering** | Python, Rust, React, DevOps, CI/CD |
 
 ---
 
@@ -336,13 +364,14 @@ streamlit run dashboard/app.py
 
 ## 🔮 Future Enhancements
 
+- [ ] 24/7 Oracle Cloud deployment
+- [ ] Multi-source trend intelligence (Reddit, GitHub, HackerNews)
+- [ ] Real-time alerting system (Slack / email notifications)
+- [ ] Trend anomaly detection engine
+- [ ] GenAI-powered technology recommendation engine
+- [ ] Interactive relationship graphs (network visualization)
 - [ ] Apache Spark integration for distributed processing
-- [ ] Databricks support for large-scale analytics
-- [ ] Real-time streaming analytics dashboard
-- [ ] LLM-based technology recommendation engine
 - [ ] Vector Search & RAG for semantic trend retrieval
-- [ ] Multi-cloud deployment (AWS / GCP / Azure)
-- [ ] Automated alerting system (Slack / email notifications)
 
 ---
 
@@ -352,7 +381,7 @@ streamlit run dashboard/app.py
 
 **Krishna Gupta**
 
-*Cloud Engineering · Data Engineering · Generative AI*
+*Cloud Engineering · Data Engineering · Generative AI Engineering*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/krishnag0211)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KrishanG02)
