@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://ai-trend-intelligence-platform.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://ai-trend-intelligence-platform-84tdyz8glqspqdrsnhj27q.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
 [![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)](https://airflow.apache.org/)
@@ -30,7 +30,7 @@
 
 <div align="center">
 
-**[🖥️ View Live Dashboard →](https://ai-trend-intelligence-platform.streamlit.app/)**
+**[🖥️ View Live Dashboard →](https://ai-trend-intelligence-platform-84tdyz8glqspqdrsnhj27q.streamlit.app/)**
 
 > Deployed on Streamlit Cloud — no setup required, open instantly in your browser.
 
