@@ -1,10 +1,11 @@
 import json
-from pathlib import Path
-
+import os
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
+from datetime import datetime
+from pathlib import Path
 
 # =====================================================
 
@@ -13,7 +14,7 @@ from streamlit_autorefresh import st_autorefresh
 # =====================================================
 
 st.set_page_config(
-page_title="AI Trend Intelligence Platform",
+page_title="Tech Trend Intelligence Platform",
 page_icon="📈",
 layout="wide"
 )
@@ -74,6 +75,27 @@ top_channels_df = pd.DataFrame(top_channels)
 
 unified_df = pd.DataFrame(unified_scores)
 
+DISCOVERED_TRENDS_PATH = (
+    ANALYTICS_PATH /
+    "discovered_keywords.json"
+)
+
+if DISCOVERED_TRENDS_PATH.exists():
+
+    with open(DISCOVERED_TRENDS_PATH) as f:
+
+        discovered_trends = json.load(f)
+
+    discovered_df = pd.DataFrame(
+        discovered_trends
+    )
+
+else:
+
+    discovered_df = pd.DataFrame(
+        columns=["keyword", "count"]
+    )
+
 selected_category = st.sidebar.selectbox(
     "Technology Category",
     [
@@ -114,6 +136,22 @@ except FileNotFoundError:
 
 st.sidebar.title("📊 Navigation")
 
+analytics_file = (
+        ANALYTICS_PATH /
+        "ai_summary.json"
+    )
+
+if analytics_file.exists():
+
+    last_updated = datetime.fromtimestamp(
+        os.path.getmtime(analytics_file)
+    )
+
+    st.sidebar.success(
+        f"Last Updated:\n{last_updated:%Y-%m-%d %H:%M}"
+    )
+
+
 page = st.sidebar.radio(
     "Choose a Section",
     [
@@ -144,7 +182,7 @@ st.sidebar.caption(
 
 # =====================================================
 
-st.title("🚀 AI Trend Intelligence Platform")
+st.title("📈 Tech Trend Intelligence Platform")
 
 st.caption(
 "Real-Time Technology Trend Monitoring, Sentiment Analytics & Trend Intelligence"
@@ -234,7 +272,7 @@ if page == "Overview":
 
     with left:
 
-        st.subheader("📈 Technology Trend Scores")
+        st.subheader("🚀 Technology Trend Scores")
 
         fig = px.bar(
             filtered_unified_df,
